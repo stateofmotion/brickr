@@ -1,0 +1,21 @@
+{
+    "name": "stateofmotion/authentication",
+    "description": "Custom authentication based on asynchronous login and registration as well as mobile api authentication",
+    "authors": [
+        {
+            "name": "Jesse Belcourt",
+            "email": "jessebelcourt@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "StateOfMotion\\Authentication\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": "StateOfMotion\\Authentication\\AuthenticationServiceProvider"
+        }
+    }
+}
