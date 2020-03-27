@@ -93,7 +93,7 @@ class BuildControllerCommand extends Command
             mkdir($path['dirname'], 0777, true);
         }
         if (!copy($s1, $s2)) {
-            echo "copy failed \n";
+           info("There was a problem creating a file");
         }
     }
 }
