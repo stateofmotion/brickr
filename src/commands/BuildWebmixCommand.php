@@ -12,7 +12,7 @@ class BuildWebmixCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'stateofmotion:webmix';
+    protected $signature = 'brickr:webpack';
 
     /**
      * The console command description.

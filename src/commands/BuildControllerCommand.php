@@ -12,7 +12,7 @@ class BuildControllerCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'stateofmotion:auth {name} {--W|web} {--M|mobile} {--L|login} {--R|register}';
+    protected $signature = 'brickr:auth {name} {--W|web} {--M|mobile} {--L|login} {--R|register}';
 
     /**
      * The console command description.
