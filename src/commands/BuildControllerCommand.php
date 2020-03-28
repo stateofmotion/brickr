@@ -4,6 +4,7 @@ namespace StateOfMotion\Authentication\Commands;
 
 use Illuminate\Console\Command;
 use StateOfMotion\Authentication\Controllers\WebLoginController;
+use StateOfMotion\Authentication\Controllers\WebRegisterController;
 
 class BuildControllerCommand extends Command
 {
@@ -68,14 +69,19 @@ class BuildControllerCommand extends Command
         } else if ($login) {
             $type = 'login';
         } else {
-            $type = 'mobile';
+            $type = 'register';
         }
 
         $controllerName = $this->argument('name');
         $path = app_path() . '/Http/Controllers/' . $controllerName . '.php';
 
+        $this->info('type: ' . $type);
+        $this->info('platform: ' . $platform);
+
         if ($type == 'login' && $platform == 'web') {
             $className = WebLoginController::class;
+        } else if ($type == 'register' && $platform == 'web') {
+            $className = WebRegisterController::class;
         }
 
         if (!file_exists($path)) {
